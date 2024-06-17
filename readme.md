@@ -1,41 +1,54 @@
-# ICRC-1, ICRC-2, and ICRC-3 Fungible Token
+# Peridot Project
+
+Welcome to the Peridot Project repository!
 
 ## Overview
-This project is focused on the development and implementation of a fungible token standard, utilizing blockchain or distributed ledger technology. The core of the project is written in Motoko and is compatibility with the DFINITY Internet Computer platform.
 
-## Contents
-- `dfx.json`: Configuration file for project settings and canister definitions.
-- `mops.toml`: Dependency management file listing various Motoko libraries and tools.
-- `runners/test_deploy.sh`: Script for testing or deploying the token system.
-- `runners/prod_deploy.sh`: Script for deploying to production token system.
-- `src/Token.mo`: Source code for the token system written in Motoko.
-- `src/examples/Allowlist.mo`: Source code for the a token who is limited to an allow list of users who can send tokens, but anyone can receive them. See the source file for more information.
-- `src/examples/Lotto.mo`: Source code for a token where whenever you burn tokens you have a chance to double your tokens. See the source file for more information.
+The Peridot Project is designed to implement the PER token, leveraging the ICP crypto platform. This repository contains all the necessary components and documentation to understand and contribute to the project.
 
-## Setup and Installation
-1. **Environment Setup**: Ensure you have an environment that supports Motoko programming. This typically involves setting up the [DFINITY Internet Computer SDK](https://internetcomputer.org/docs/current/references/cli-reference/dfx-parent) and [mops tool chain](https://docs.mops.one/quick-start).
-2. **Dependency Installation**: Install the dependencies listed in `mops.toml`. `mops install`.
-3. **Configuration**: Adjust `dfx.json` and `mops.toml` according to your project's specific needs, such as changing canister settings or updating dependency versions.
+## Token.mo
 
-## Usage
-- **Development**: Modify and enhance `src/Token.mo` as per your requirements. This file contains the logic and structure of the fungible token system.
-- **Testing and Deployment**: Use `runners/test_deploy.sh` for deploying the token system to a test or development environment. This script may need modifications to fit your deployment process.
-- **Production Deployment**: Use `runners/prod_deploy.sh` for deploying the token system to a main net environment. This script will need modifications to fit your deployment process.
+The design of the PER token is based on a minting mechanism using ICP crypto, with cyclical divisions intended to maintain the token's value stability.
 
-## Dependencies
-- DFX and Mops
-- Additional dependencies are listed in `mops.toml`. Ensure they are properly installed and configured.
+- **Initial Launch**: The exchange rate is set at 5,000,000 PER for 1 ICP Crypto.
+- **First Cycle**: When the number of tokens reaches 5,000,000,000 PER, equivalent to 1000 ICP, the minting process is halved.
+  - New Exchange Rate: 2,500,000 PER for 1 ICP Crypto.
 
-## Contribution and Development Guidelines
-- **Coding Standards**: Adhere to established Motoko coding practices. Ensure readability and maintainability of the code.
-- **Testing**: Thoroughly test any new features or changes in a controlled environment before integrating them into the main project.
-- **Documentation**: Update documentation and comments within the code to reflect changes or additions to the project.
+This cyclical halving continues to ensure the stability of the token's value over time.
 
-## Repository
-- [Project Repository](https://github.com/PanIndustrial-Org/ICRC_fungible)
+## Getting Started
+
+To get started with the Peridot Project, follow these steps:
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/Peridot.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd Peridot
+    ```
+3. Install the necessary dependencies and build the project:
+    ```sh
+    # Add your build and installation instructions here
+    ```
+
+## Contributing
+
+We welcome contributions to the Peridot Project! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
 
 ## License
-- MIT License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
-- **Contributing**: For contributing to this project, please submit a pull request to the repository.
+
+For any questions or suggestions, please feel free to contact us at [your-email@example.com].
+
+Thank you for your interest in the Peridot Project!
